@@ -6,26 +6,36 @@ namespace SortingAlgorithms
     {
         static void Main(string[] args)
         {
-            int[] bubbleSortInput = new int[] { 1, 5, 3, 10, 9, 15 };
-            Console.Write("Unsorted array for Bubble sort: ");
-            PrintArray(bubbleSortInput);
-            BubbleSort(bubbleSortInput);
-            Console.Write("After Bubble sort: ");
-            PrintArray(bubbleSortInput);
+            //int[] bubbleSortInput = new int[] { 1, 5, 3, 10, 9, 15 };
+            //Console.Write("Unsorted array for Bubble sort: ");
+            //PrintArray(bubbleSortInput);
+            //BubbleSort(bubbleSortInput);
+            //Console.Write("After Bubble sort: ");
+            //PrintArray(bubbleSortInput);
 
-            int[] selectionSortInput = new int[] { 1, 5, 3, 10, 9, 15 };
-            Console.Write("Unsorted array for Selection sort: ");
-            PrintArray(selectionSortInput);
-            SelectionSort(selectionSortInput);
-            Console.Write("After Selection sort: ");
-            PrintArray(selectionSortInput);
+            //int[] selectionSortInput = new int[] { 1, 5, 3, 10, 9, 15 };
+            //Console.Write("Unsorted array for Selection sort: ");
+            //PrintArray(selectionSortInput);
+            //SelectionSort(selectionSortInput);
+            //Console.Write("After Selection sort: ");
+            //PrintArray(selectionSortInput);
 
-            int[] insertionSortInput = new int[] { 1, 5, 3, 10, 9, 15 };
-            Console.Write("Unsorted array for Insertion sort: ");
-            PrintArray(insertionSortInput);
-            SelectionSort(insertionSortInput);
-            Console.Write("After Insertion sort: ");
-            PrintArray(insertionSortInput);
+            //int[] insertionSortInput = new int[] { 1, 5, 3, 10, 9, 15 };
+            //Console.Write("Unsorted array for Insertion sort: ");
+            //PrintArray(insertionSortInput);
+            //SelectionSort(insertionSortInput);
+            //Console.Write("After Insertion sort: ");
+            //PrintArray(insertionSortInput);
+
+
+            int[] quickSortInput = new int[] { 1, 5, 3, 10, 9, 15, 0, 2, 4 };
+            Console.Write("Unsorted array for Quick sort: ");
+            PrintArray(quickSortInput);
+            QuickSort.Sort(quickSortInput, 0, quickSortInput.Length - 1);
+            Console.Write("After Quick sort: ");
+            PrintArray(quickSortInput);
+
+
         }
         #region BubbleSort implementation
         public static void BubbleSort(int[] data)

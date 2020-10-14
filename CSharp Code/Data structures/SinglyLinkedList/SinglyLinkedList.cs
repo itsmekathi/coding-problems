@@ -4,40 +4,40 @@ namespace SinglyLinkedList
 {
     internal class SinglyLinkedList
     {
-        internal Node head;
+        internal SNode head;
         internal void InsertFront(int data)
         {
-            Node newNode = new Node(data);
+            SNode newNode = new SNode(data);
             newNode.next = head;
             head = newNode;
         }
         internal void InsertEnd(int data)
         {
-            Node newNode = new Node(data);
+            SNode newNode = new SNode(data);
             if (head == null)
             {
                 head = newNode;
                 return;
             }
-            Node lastNode = GetLastNode();
+            SNode lastNode = GetLastNode();
             lastNode.next = newNode;
         }
-        internal void InsertAfter(Node prev_node, int data)
+        internal void InsertAfter(SNode prev_node, int data)
         {
             if(prev_node == null)
             {
                 Console.WriteLine("The given previous node cannot be null");
                 return;
             }
-            Node newNode = new Node(data);
+            SNode newNode = new SNode(data);
             newNode.next = prev_node.next;
             prev_node.next = newNode;
         }
 
         internal void DeleteNodeByKey(int data)
         {
-            Node temp = head;
-            Node prev = null;
+            SNode temp = head;
+            SNode prev = null;
             if(temp != null && temp.data == data)
             {
                 head = temp.next;
@@ -57,9 +57,9 @@ namespace SinglyLinkedList
 
         public void Reverse()
         {
-            Node prev = null;
-            Node current = head;
-            Node temp = null;
+            SNode prev = null;
+            SNode current = head;
+            SNode temp = null;
 
             while(current != null)
             {
@@ -71,9 +71,9 @@ namespace SinglyLinkedList
             head = prev;
         }
 
-        private Node GetLastNode()
+        private SNode GetLastNode()
         {
-            Node temp = head;
+            SNode temp = head;
             while (temp.next != null)
             {
                 temp = temp.next;
